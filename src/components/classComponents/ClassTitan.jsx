@@ -13,6 +13,11 @@ class ClassTitan extends Component {
   }
 
   // Your code here 
+  componentDidMount() {
+    this.lunchTimeOut = ()
+  }
+
+
   render() {
     const { isLunchTime, isHungry } = this.state;
     const mood = (isLunchTime && isHungry) ? 'MAD' : isHungry ? 'HUNGRY' : 'CHILL';

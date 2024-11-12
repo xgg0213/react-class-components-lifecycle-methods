@@ -8,6 +8,8 @@ const FunctionTitan = () => {
   const [isLunchTime, setIsLunchTime] = useState(false);
   const mood = (isLunchTime && isHungry) ? 'MAD' : isHungry ? 'HUNGRY' : 'CHILL';
 
+  // this useEffect without return (line 15) === componentDidMount
+  // return statement === componentWillUnmount
   useEffect(() => {
     const timeout = setTimeout(() => setIsLunchTime(true), 7000);
     return () => clearTimeout(timeout);

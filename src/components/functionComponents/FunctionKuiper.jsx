@@ -13,6 +13,8 @@ const FunctionKuiper = () => {
     setKuiper(kuiper);
   };
 
+  // this entire useEffect === componendDidUpdate, no cleanup function here (i.e. return statement in FunctionTitan)
+  // can also add on return statement, that works as componentWillUnmount
   useEffect(() => {
     if (guessCount > 4) {
       updateState(0, kuiperSleep);
